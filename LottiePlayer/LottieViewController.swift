@@ -12,6 +12,9 @@ class LottieViewController: UIViewController {
     let animationView: AnimationView = {
         let view = AnimationView(frame: .zero)
         view.loopMode = .loop
+        view.layer.cornerRadius = 20
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.lightGray.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -24,7 +27,9 @@ class LottieViewController: UIViewController {
             self.animationView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.animationView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             self.animationView.leftAnchor.constraint(greaterThanOrEqualTo: self.view.leftAnchor, constant: 20),
-            self.animationView.rightAnchor.constraint(lessThanOrEqualTo: self.view.rightAnchor, constant: 10)
+            self.animationView.rightAnchor.constraint(lessThanOrEqualTo: self.view.rightAnchor, constant: 20),
+            self.animationView.topAnchor.constraint(greaterThanOrEqualTo: self.view.topAnchor, constant: 60),
+            self.animationView.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: 60)
         ])
     }
     
