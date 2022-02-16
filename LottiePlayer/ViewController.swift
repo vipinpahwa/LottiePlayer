@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
     private let loadButton: UIButton = {
@@ -31,10 +32,20 @@ class ViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
+    
+    private let spinner: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView(style: .large)
+        indicatorView.hidesWhenStopped = true
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        return indicatorView
+    }()
+    
+    private var lottieManager = LottieManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        urlField.delegate = self
+        lottieManager.delegate = self
+//        urlField.delegate = self
         loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
         
         self.view.addSubview(urlField)
@@ -51,18 +62,45 @@ class ViewController: UIViewController {
             self.loadButton.heightAnchor.constraint(equalToConstant: 36),
             self.loadButton.widthAnchor.constraint(equalToConstant: 56)
         ])
+        
+        self.view.addSubview(spinner)
+        NSLayoutConstraint.activate([
+            self.spinner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.spinner.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
     }
     
     @objc private func loadButtonTapped() {
         urlField.resignFirstResponder()
-        let vc = LottieViewController()
-        vc.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(vc, animated: false)
+        spinner.startAnimating()
+        if let url = urlField.text {
+            lottieManager.loadAnimation(url: url)
+        }
+//        let vc = LottieViewController()
+//        vc.modalPresentationStyle = .fullScreen
+//        navigationController?.pushViewController(vc, animated: false)
     }
 }
 
-extension ViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
+//extension ViewController: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if let url = textField.text {
+//            lottieManager.loadAnimation(url: url)
+//        }
+//        print("textFieldDidEndEditing")
+//    }
+//}
+
+extension ViewController: LottieManagerDelegate {
+    func didLoadAnimation(animation: Animation) {
+        spinner.stopAnimating()
+        print("didLoadAnimation")
     }
+    
+    func didFailLoadingAnimation() {
+        spinner.stopAnimating()
+        print("didFailLoadingAnimation")
+    }
+    
+    
 }
