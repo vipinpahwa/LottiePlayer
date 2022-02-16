@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             self.urlField.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.urlField.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
+            self.urlField.widthAnchor.constraint(equalToConstant: 200),
             self.urlField.heightAnchor.constraint(equalToConstant: 40)
         ])
         
@@ -94,6 +95,10 @@ class ViewController: UIViewController {
 extension ViewController: LottieManagerDelegate {
     func didLoadAnimation(animation: Animation) {
         spinner.stopAnimating()
+        let vc = LottieViewController()
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: false)
+        vc.playAnimation(animation: animation)
         print("didLoadAnimation")
     }
     
