@@ -55,6 +55,9 @@ class ViewController: UIViewController {
     
     @objc private func loadButtonTapped() {
         urlField.resignFirstResponder()
+        let vc = LottieViewController()
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: false)
     }
 }
 

@@ -16,6 +16,8 @@
 		CC9A62BA27BD219C00BC17FC /* LottiePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62B927BD219C00BC17FC /* LottiePlayerTests.swift */; };
 		CC9A62C427BD219C00BC17FC /* LottiePlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62C327BD219C00BC17FC /* LottiePlayerUITests.swift */; };
 		CC9A62C627BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */; };
+		CC9A62D427BD345D00BC17FC /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62D327BD345D00BC17FC /* LottieViewController.swift */; };
+		CC9A62D627BD5B8D00BC17FC /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CC9A62BF27BD219C00BC17FC /* LottiePlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottiePlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9A62C327BD219C00BC17FC /* LottiePlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottiePlayerUITests.swift; sourceTree = "<group>"; };
 		CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottiePlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC9A62D327BD345D00BC17FC /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				CC9A62AB27BD219C00BC17FC /* Assets.xcassets */,
 				CC9A62AD27BD219C00BC17FC /* LaunchScreen.storyboard */,
 				CC9A62B027BD219C00BC17FC /* Info.plist */,
+				CC9A62D327BD345D00BC17FC /* LottieViewController.swift */,
+				CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */,
 			);
 			path = LottiePlayer;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9A62A727BD219900BC17FC /* ViewController.swift in Sources */,
+				CC9A62D427BD345D00BC17FC /* LottieViewController.swift in Sources */,
+				CC9A62D627BD5B8D00BC17FC /* LottieManager.swift in Sources */,
 				CC9A62A327BD219900BC17FC /* AppDelegate.swift in Sources */,
 				CC9A62A527BD219900BC17FC /* SceneDelegate.swift in Sources */,
 			);
