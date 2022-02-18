@@ -12,9 +12,6 @@ class LottieViewController: UIViewController {
     let animationView: AnimationView = {
         let view = AnimationView(frame: .zero)
         view.loopMode = .loop
-        view.layer.cornerRadius = 20
-        view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.lightGray.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
