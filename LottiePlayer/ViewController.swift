@@ -45,7 +45,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lottieManager.delegate = self
-//        urlField.delegate = self
         loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
         
         self.view.addSubview(urlField)
@@ -77,20 +76,8 @@ class ViewController: UIViewController {
         if let url = urlField.text {
             lottieManager.loadAnimation(url: url)
         }
-//        let vc = LottieViewController()
-//        vc.modalPresentationStyle = .fullScreen
-//        navigationController?.pushViewController(vc, animated: false)
     }
 }
-
-//extension ViewController: UITextFieldDelegate {
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        if let url = textField.text {
-//            lottieManager.loadAnimation(url: url)
-//        }
-//        print("textFieldDidEndEditing")
-//    }
-//}
 
 extension ViewController: LottieManagerDelegate {
     func didLoadAnimation(animation: Animation) {
@@ -106,6 +93,4 @@ extension ViewController: LottieManagerDelegate {
         spinner.stopAnimating()
         print("didFailLoadingAnimation")
     }
-    
-    
 }
