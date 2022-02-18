@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     private let urlField: UITextField = {
         let textField = UITextField(frame: .zero)
         textField.placeholder = "Enter url here...."
+        textField.clearButtonMode = .always
+        textField.keyboardType = .URL
         textField.autocapitalizationType = .none
         textField.borderStyle = .roundedRect
         textField.textColor = .black
