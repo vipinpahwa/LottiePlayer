@@ -21,6 +21,7 @@
 		CC9A62C627BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */; };
 		CC9A62D427BD345D00BC17FC /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62D327BD345D00BC17FC /* LottieViewController.swift */; };
 		CC9A62D627BD5B8D00BC17FC /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */; };
+		CCB63ABF27C00AF800F845DD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB63ABE27C00AF800F845DD /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottiePlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC9A62D327BD345D00BC17FC /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
 		CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
+		CCB63ABE27C00AF800F845DD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		E86092E90DFFAA0D6AC3C8E4 /* Pods-LottiePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottiePlayer.debug.xcconfig"; path = "Target Support Files/Pods-LottiePlayer/Pods-LottiePlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				CC9A62B027BD219C00BC17FC /* Info.plist */,
 				CC9A62D327BD345D00BC17FC /* LottieViewController.swift */,
 				CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */,
+				CCB63ABE27C00AF800F845DD /* InputView.swift */,
 			);
 			path = LottiePlayer;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				CC9A62A727BD219900BC17FC /* InputViewController.swift in Sources */,
 				CC9A62D427BD345D00BC17FC /* LottieViewController.swift in Sources */,
 				CC9A62D627BD5B8D00BC17FC /* LottieManager.swift in Sources */,
+				CCB63ABF27C00AF800F845DD /* InputView.swift in Sources */,
 				CC9A62A327BD219900BC17FC /* AppDelegate.swift in Sources */,
 				CC9A62A527BD219900BC17FC /* SceneDelegate.swift in Sources */,
 			);
