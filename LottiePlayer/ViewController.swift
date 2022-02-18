@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         button.setTitle("Load", for: .normal)
         button.backgroundColor = .link
         button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.lightGray, for: .highlighted)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -104,7 +105,7 @@ extension ViewController: LottieManagerDelegate {
         spinner.stopAnimating()
         let vc = LottieViewController()
         vc.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
         vc.playAnimation(animation: animation)
         print("didLoadAnimation")
     }
