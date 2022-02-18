@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-class ViewController: UIViewController {
+class InputViewController: UIViewController {
     private let loadButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle("Load", for: .normal)
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: LottieManagerDelegate {
+extension InputViewController: LottieManagerDelegate {
     func didLoadAnimation(animation: Animation) {
         spinner.stopAnimating()
         let vc = LottieViewController()
@@ -117,7 +117,7 @@ extension ViewController: LottieManagerDelegate {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension InputViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.errorLabel.isHidden = true
     }
