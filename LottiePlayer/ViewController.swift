@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .regular)
         return button
     }()
     
@@ -60,8 +60,8 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             self.loadButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             self.loadButton.topAnchor.constraint(equalTo: self.urlField.bottomAnchor, constant: 32),
-            self.loadButton.heightAnchor.constraint(equalToConstant: 36),
-            self.loadButton.widthAnchor.constraint(equalToConstant: 56)
+            self.loadButton.heightAnchor.constraint(equalToConstant: 30),
+            self.loadButton.widthAnchor.constraint(equalToConstant: 120)
         ])
         
         self.view.addSubview(spinner)
