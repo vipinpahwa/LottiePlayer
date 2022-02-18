@@ -12,7 +12,7 @@
 		9C6F787E04845550EC276805 /* Pods_LottiePlayer_LottiePlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6616065D72A7D207C8F00CF /* Pods_LottiePlayer_LottiePlayerUITests.framework */; };
 		CC9A62A327BD219900BC17FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62A227BD219900BC17FC /* AppDelegate.swift */; };
 		CC9A62A527BD219900BC17FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62A427BD219900BC17FC /* SceneDelegate.swift */; };
-		CC9A62A727BD219900BC17FC /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62A627BD219900BC17FC /* InputViewController.swift */; };
+		CC9A62A727BD219900BC17FC /* URLInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62A627BD219900BC17FC /* URLInputViewController.swift */; };
 		CC9A62AA27BD219900BC17FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A62A827BD219900BC17FC /* Main.storyboard */; };
 		CC9A62AC27BD219C00BC17FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9A62AB27BD219C00BC17FC /* Assets.xcassets */; };
 		CC9A62AF27BD219C00BC17FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A62AD27BD219C00BC17FC /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		CC9A62C627BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */; };
 		CC9A62D427BD345D00BC17FC /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62D327BD345D00BC17FC /* LottieViewController.swift */; };
 		CC9A62D627BD5B8D00BC17FC /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */; };
-		CCB63ABF27C00AF800F845DD /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB63ABE27C00AF800F845DD /* InputView.swift */; };
+		CCB63ABF27C00AF800F845DD /* URLInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB63ABE27C00AF800F845DD /* URLInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,7 @@
 		CC9A629F27BD219900BC17FC /* LottiePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottiePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9A62A227BD219900BC17FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC9A62A427BD219900BC17FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC9A62A627BD219900BC17FC /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		CC9A62A627BD219900BC17FC /* URLInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLInputViewController.swift; sourceTree = "<group>"; };
 		CC9A62A927BD219900BC17FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9A62AB27BD219C00BC17FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9A62AE27BD219C00BC17FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottiePlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC9A62D327BD345D00BC17FC /* LottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
 		CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
-		CCB63ABE27C00AF800F845DD /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		CCB63ABE27C00AF800F845DD /* URLInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLInputView.swift; sourceTree = "<group>"; };
 		E86092E90DFFAA0D6AC3C8E4 /* Pods-LottiePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottiePlayer.debug.xcconfig"; path = "Target Support Files/Pods-LottiePlayer/Pods-LottiePlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,14 +147,14 @@
 			children = (
 				CC9A62A227BD219900BC17FC /* AppDelegate.swift */,
 				CC9A62A427BD219900BC17FC /* SceneDelegate.swift */,
-				CC9A62A627BD219900BC17FC /* InputViewController.swift */,
+				CC9A62A627BD219900BC17FC /* URLInputViewController.swift */,
 				CC9A62A827BD219900BC17FC /* Main.storyboard */,
 				CC9A62AB27BD219C00BC17FC /* Assets.xcassets */,
 				CC9A62AD27BD219C00BC17FC /* LaunchScreen.storyboard */,
 				CC9A62B027BD219C00BC17FC /* Info.plist */,
 				CC9A62D327BD345D00BC17FC /* LottieViewController.swift */,
 				CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */,
-				CCB63ABE27C00AF800F845DD /* InputView.swift */,
+				CCB63ABE27C00AF800F845DD /* URLInputView.swift */,
 			);
 			path = LottiePlayer;
 			sourceTree = "<group>";
@@ -415,10 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9A62A727BD219900BC17FC /* InputViewController.swift in Sources */,
+				CC9A62A727BD219900BC17FC /* URLInputViewController.swift in Sources */,
 				CC9A62D427BD345D00BC17FC /* LottieViewController.swift in Sources */,
 				CC9A62D627BD5B8D00BC17FC /* LottieManager.swift in Sources */,
-				CCB63ABF27C00AF800F845DD /* InputView.swift in Sources */,
+				CCB63ABF27C00AF800F845DD /* URLInputView.swift in Sources */,
 				CC9A62A327BD219900BC17FC /* AppDelegate.swift in Sources */,
 				CC9A62A527BD219900BC17FC /* SceneDelegate.swift in Sources */,
 			);

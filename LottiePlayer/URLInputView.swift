@@ -1,5 +1,5 @@
 //
-//  InputView.swift
+//  URLInputView.swift
 //  LottiePlayer
 //
 //  Created by Vipin Pahwa on 18/02/22.
@@ -12,7 +12,7 @@ protocol InputViewDelegate: AnyObject {
     func didTapLoadButton(input : String?)
 }
 
-class InputView: UIView {
+class URLInputView: UIView {
     private let loadButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle("Load", for: .normal)
@@ -113,8 +113,9 @@ class InputView: UIView {
     }
 }
 
-extension InputView: UITextFieldDelegate {
+extension URLInputView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.errorLabel.isHidden = true
+        self.spinner.stopAnimating()
     }
 }
