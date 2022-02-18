@@ -145,16 +145,13 @@
 		CC9A62A127BD219900BC17FC /* LottiePlayer */ = {
 			isa = PBXGroup;
 			children = (
+				CCB63AC027C017FD00F845DD /* Model */,
+				CCB63AC127C0180800F845DD /* View */,
+				CCB63AC227C0180F00F845DD /* Controller */,
 				CC9A62A227BD219900BC17FC /* AppDelegate.swift */,
 				CC9A62A427BD219900BC17FC /* SceneDelegate.swift */,
-				CC9A62A627BD219900BC17FC /* URLInputViewController.swift */,
-				CC9A62A827BD219900BC17FC /* Main.storyboard */,
 				CC9A62AB27BD219C00BC17FC /* Assets.xcassets */,
-				CC9A62AD27BD219C00BC17FC /* LaunchScreen.storyboard */,
 				CC9A62B027BD219C00BC17FC /* Info.plist */,
-				CC9A62D327BD345D00BC17FC /* LottieViewController.swift */,
-				CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */,
-				CCB63ABE27C00AF800F845DD /* URLInputView.swift */,
 			);
 			path = LottiePlayer;
 			sourceTree = "<group>";
@@ -174,6 +171,33 @@
 				CC9A62C527BD219C00BC17FC /* LottiePlayerUITestsLaunchTests.swift */,
 			);
 			path = LottiePlayerUITests;
+			sourceTree = "<group>";
+		};
+		CCB63AC027C017FD00F845DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A62D527BD5B8D00BC17FC /* LottieManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCB63AC127C0180800F845DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A62AD27BD219C00BC17FC /* LaunchScreen.storyboard */,
+				CC9A62A827BD219900BC17FC /* Main.storyboard */,
+				CCB63ABE27C00AF800F845DD /* URLInputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCB63AC227C0180F00F845DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC9A62D327BD345D00BC17FC /* LottieViewController.swift */,
+				CC9A62A627BD219900BC17FC /* URLInputViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
