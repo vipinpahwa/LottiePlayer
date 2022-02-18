@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol InputViewDelegate: AnyObject {
+protocol URLInputViewDelegate: AnyObject {
     func didTapLoadButton(input : String?)
 }
 
@@ -58,7 +58,7 @@ class URLInputView: UIView {
         return indicatorView
     }()
     
-    weak var delegate: InputViewDelegate?
+    weak var delegate: URLInputViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -104,12 +104,19 @@ class URLInputView: UIView {
     
     @objc private func loadButtonTapped() {
         urlField.resignFirstResponder()
-        spinner.startAnimating()
         delegate?.didTapLoadButton(input: urlField.text)
+    }
+    
+    func startLoading() {
+        self.spinner.startAnimating()
     }
     
     func stopLoading() {
         self.spinner.stopAnimating()
+    }
+    
+    func showError() {
+        self.errorLabel.isHidden = false
     }
 }
 

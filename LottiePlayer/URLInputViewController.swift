@@ -15,6 +15,7 @@ class URLInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lottieManager.delegate = self
+        urlInputView.delegate = self
         urlInputView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(urlInputView)
         NSLayoutConstraint.activate([
@@ -38,6 +39,19 @@ extension URLInputViewController: LottieManagerDelegate {
     
     func didFailLoadingAnimation() {
         urlInputView.stopLoading()
+        urlInputView.showError()
         print("didFailLoadingAnimation")
+    }
+}
+
+extension URLInputViewController: URLInputViewDelegate {
+    func didTapLoadButton(input: String?) {
+        guard let input = input,
+              let url = URL(string: input) else {
+                  urlInputView.showError()
+                  return
+              }
+        urlInputView.startLoading()
+        lottieManager.loadAnimation(url: url)
     }
 }
