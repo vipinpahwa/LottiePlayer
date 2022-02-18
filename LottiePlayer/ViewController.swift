@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     private let errorLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.text = "Failed to load animation. Try with a valid url."
+        label.text = "Failed to load animation. Try with a different url."
         label.textColor = .red
         label.isHidden = true
         label.isUserInteractionEnabled = false
@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lottieManager.delegate = self
+        urlField.delegate = self
         loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
         
         self.view.addSubview(urlField)
@@ -112,5 +113,11 @@ extension ViewController: LottieManagerDelegate {
         spinner.stopAnimating()
         errorLabel.isHidden = false
         print("didFailLoadingAnimation")
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.errorLabel.isHidden = true
     }
 }
