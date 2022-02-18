@@ -35,6 +35,17 @@ class ViewController: UIViewController {
         return textField
     }()
     
+    private let errorLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = "Failed to load animation. Try with a valid url."
+        label.textColor = .red
+        label.isHidden = true
+        label.isUserInteractionEnabled = false
+        label.font = .systemFont(ofSize: 12, weight: .light)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let spinner: UIActivityIndicatorView = {
         let indicatorView = UIActivityIndicatorView(style: .large)
         indicatorView.hidesWhenStopped = true
@@ -65,6 +76,12 @@ class ViewController: UIViewController {
             self.loadButton.widthAnchor.constraint(equalToConstant: 120)
         ])
         
+        self.view.addSubview(errorLabel)
+        NSLayoutConstraint.activate([
+            self.errorLabel.topAnchor.constraint(equalTo: self.loadButton.bottomAnchor, constant: 32),
+            self.errorLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
+        ])
+        
         self.view.addSubview(spinner)
         NSLayoutConstraint.activate([
             self.spinner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -93,6 +110,7 @@ extension ViewController: LottieManagerDelegate {
     
     func didFailLoadingAnimation() {
         spinner.stopAnimating()
+        errorLabel.isHidden = false
         print("didFailLoadingAnimation")
     }
 }
