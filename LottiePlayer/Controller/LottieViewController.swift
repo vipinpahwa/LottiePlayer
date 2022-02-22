@@ -9,29 +9,22 @@ import UIKit
 import Lottie
 
 class LottieViewController: UIViewController {
-    let animationView: AnimationView = {
-        let view = AnimationView(frame: .zero)
-        view.loopMode = .loop
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private let lottiePlayerView = LottiePlayerView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        self.view.addSubview(animationView)
+        lottiePlayerView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(lottiePlayerView)
         NSLayoutConstraint.activate([
-            self.animationView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.animationView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            self.animationView.leftAnchor.constraint(greaterThanOrEqualTo: self.view.leftAnchor, constant: 20),
-            self.animationView.rightAnchor.constraint(lessThanOrEqualTo: self.view.rightAnchor, constant: 20),
-            self.animationView.topAnchor.constraint(greaterThanOrEqualTo: self.view.topAnchor, constant: 100),
-            self.animationView.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: 100)
+            lottiePlayerView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            lottiePlayerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            lottiePlayerView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            lottiePlayerView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
         ])
     }
     
     func playAnimation(animation: Animation) {
-        animationView.animation = animation
-        animationView.play(completion: nil)
+        lottiePlayerView.playAnimation(animation: animation)
     }
 }
