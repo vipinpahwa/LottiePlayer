@@ -13,6 +13,3 @@ cd LottiePlayer
 ```
 
 3. Build and run the LottiePlayer scheme on Xcode.
-
-## Screenshots
-![Simulator Screen Shot - iPhone SE (2nd generation) - 2022-02-22 at 23 07 21](https://user-images.githubusercontent.com/40717158/155187369-6cd92765-278a-423b-8a39-b6f9a3fc2895.png)
